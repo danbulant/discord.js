@@ -80,7 +80,7 @@
     "webpack-cli": "^3.3.12"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=14.0.0"
   },
   "browser": {
     "@discordjs/opus": false,
@@ -110,9 +110,9 @@
     "src/client/voice/receiver/PacketHandler.js": false,
     "src/client/voice/receiver/Receiver.js": false,
     "src/client/voice/util/PlayInterface.js": false,
-    "src/client/voice/util/Secretbox.js": false,
     "src/client/voice/util/Silence.js": false,
-    "src/client/voice/util/VolumeInterface.js": false
+    "src/client/voice/util/VolumeInterface.js": false,
+    "src/util/Sodium.js": false
   },
   "husky": {
     "hooks": {

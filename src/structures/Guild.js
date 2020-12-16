@@ -1433,6 +1433,23 @@ class Guild extends Base {
   }
 
   /**
+   * Get the commands associated with this guild.
+   * @returns {ApplicationCommand[]} A list of commands.
+   */
+  getCommands() {
+    return this.client.interactionClient.getCommands(this.id);
+  }
+
+  /**
+   * Create a command. See {@link InteractionClient}.
+   * @param {Object} command The command description.
+   * @returns {ApplicationCommand} The created command.
+   */
+  createCommand(command) {
+    return this.client.interactionClient.createCommand(command, this.id);
+  }
+
+  /**
    * Leaves the guild.
    * @returns {Promise<Guild>}
    * @example
