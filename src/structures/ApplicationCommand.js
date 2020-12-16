@@ -56,7 +56,7 @@ class ApplicationCommand extends Base {
      * @type {Object[]}
      * @readonly
      */
-    this.options = data.options.map(function m(o) {
+    this.options = data.options?.map(function m(o) {
       return {
         type: ApplicationCommandOptionType[o.type],
         name: o.name,
