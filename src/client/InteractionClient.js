@@ -76,14 +76,14 @@ class InteractionClient extends BaseClient {
    * Create a command.
    * @param {Object} command The command description.
    * @param {Snowflake?} guildID Optional guild ID.
-   * @returns {ApplicationCommand} The created command.
+   * @returns {Promise<ApplicationCommand>} The created command.
    */
-  createCommand(command, guildID) {
-    let path = this.client.api.applications('@me');
+  async createCommand(command, guildID) {
+    let path = this.client.api.applications(this.client.user.id);
     if (guildID) {
       path = path.guilds(guildID);
     }
-    const c = path.commands.post({
+    const c = await path.commands.post({
       data: {
         name: command.name,
         description: command.description,
