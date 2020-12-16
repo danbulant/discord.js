@@ -19,6 +19,7 @@
 
 ## Table of contents
 
+- [Changes](#changes)
 - [About](#about)
 - [Installation](#installation)
   - [Audio engines](#audio-engines)
@@ -28,6 +29,10 @@
   - [Extensions](#extensions)
 - [Contributing](#contributing)
 - [Help](#help)
+
+## Changes
+
+This fork has the inline replies and slash commands for **testing** purposes.
 
 ## About
 
